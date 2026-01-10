@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Clone</title>
+    <title>Youtube</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <div class="nav-section nav-left">
+                <button class="nav-button menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="#" class="nav-logo">
+                    <img src="images/logo.png" alt="logo" class="logo-image">
+                    <h2 class="logo-text">FaizTube</h2>
+                </a>
+            </div>
+
+            <div class="nav-section nav-center">
+                <form action="#" class="search-form">
+                    <input type="search" placeholder="search" class="search-input">
+                    <button class="nav-button search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <button class="nav-button mic-button">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+            </div>
+
+            <div class="nav-section nav-right">
+                <button class="nav-button theme-button">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+                <img src="images/user.jpg" alt="User Image" class="user-image">
+            </div>
+        </nav>
+    </header>
 </body>
 </html>
