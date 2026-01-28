@@ -15,6 +15,19 @@
     --overlay-dark-color: rgba(0, 0, 0, 0.6);
 }
 
+body.dark-mode{
+    --white-color: #171717;
+    --black-color: #d4d4d4;
+    --light-white-color: #333;
+    --light-gray-color: #404040;
+    --border-color: #737373;
+    --secondary-color: #d4d4d4;
+}
+
+body {
+    background: var(--white-color);
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -67,6 +80,7 @@ header, .category-list{
 }
 
 .container .nav-button i{
+    color: var(--black-color);
     display: flex;
     font-size: 1.5rem;
     align-items: center;
@@ -86,6 +100,7 @@ header, .category-list{
 
 .navbar .nav-center{
     display: flex;
+    gap: 0.5rem;
     width: 100%;
     justify-content: center;
 }
@@ -104,6 +119,12 @@ header, .category-list{
     outline: none;
     border-radius: 3.1rem 0 0 3.1rem;
     font-size: 1rem;
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.navbar .search-form .search-input:focus{
+    border-color: var(--primary-color);
 }
 
 .navbar .search-form .search-button{
@@ -114,9 +135,14 @@ header, .category-list{
     border-left: 0;
 }
 
+.navbar .nav-right .search-button {
+    display: none;
+}
+
 .main-layout{
     display: flex;
     overflow-y: auto;
+    scrollbar-color: #a6a6a6 transparent;
 }
 
 .main-layout .sidebar{
@@ -204,6 +230,7 @@ body.sidebar-hidden .main-layout .sidebar{
     border-radius: 0.5rem;
     padding: 0.4rem 0.75rem;
     white-space: nowrap;
+    color: var(--black-color);
 }
 
 .category-list .category-button.active{
@@ -283,6 +310,14 @@ body.sidebar-hidden .main-layout .sidebar{
 }
 
 @media (max-width: 768px){
+    .navbar .nav-center{
+        display: none;
+    }
+
+    .navbar .nav-right .search-button{
+        display: block;
+    }
+
     .main-layout .screen-overlay{
         position: absolute;
         left: 0;
